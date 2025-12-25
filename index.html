@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>极简边框 - 支持与帮助</title>
+    <meta
+      name="description"
+      content="极简边框（PureFrame）官方支持页面：常见问题、使用帮助、隐私说明与联系方式。无广告、无内购、无需登录。"
+    />
+    <style>
+      :root {
+        --bg: #0b0f17;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel-2: rgba(255, 255, 255, 0.08);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.68);
+        --border: rgba(255, 255, 255, 0.12);
+        --accent: #7aa7ff;
+        --accent-2: #a78bfa;
+        --ok: #34d399;
+        --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+        --radius: 16px;
+        --max: 980px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --panel: rgba(0, 0, 0, 0.04);
+          --panel-2: rgba(0, 0, 0, 0.06);
+          --text: rgba(0, 0, 0, 0.88);
+          --muted: rgba(0, 0, 0, 0.62);
+          --border: rgba(0, 0, 0, 0.10);
+          --shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
+          "Microsoft YaHei", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: radial-gradient(1200px 800px at 20% 10%, rgba(122, 167, 255, 0.20), transparent 60%),
+          radial-gradient(1200px 800px at 80% 0%, rgba(167, 139, 250, 0.18), transparent 55%),
+          radial-gradient(900px 700px at 50% 120%, rgba(52, 211, 153, 0.10), transparent 55%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 28px 18px 48px;
+      }
+
+      header {
+        margin-top: 10px;
+        padding: 26px 22px;
+        border: 1px solid var(--border);
+        background: linear-gradient(180deg, var(--panel-2), var(--panel));
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .badge {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: linear-gradient(135deg, rgba(122, 167, 255, 0.30), rgba(167, 139, 250, 0.26));
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+      }
+
+      .badge svg {
+        width: 24px;
+        height: 24px;
+        opacity: 0.92;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: 0.2px;
+      }
+
+      .subtitle {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .pill {
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+        padding: 8px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .pill strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      main {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      @media (min-width: 860px) {
+        main {
+          grid-template-columns: 1.1fr 0.9fr;
+          gap: 16px;
+        }
+      }
+
+      section {
+        border: 1px solid var(--border);
+        background: linear-gradient(180deg, var(--panel-2), var(--panel));
+        border-radius: var(--radius);
+        padding: 18px 18px;
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+      }
+
+      .kvs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      @media (min-width: 520px) {
+        .kvs {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .kv {
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 14px;
+        padding: 12px 12px;
+      }
+
+      .kv .k {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .kv .v {
+        margin-top: 6px;
+        font-size: 14px;
+        color: var(--text);
+      }
+
+      .faq {
+        display: grid;
+        gap: 10px;
+      }
+
+      details {
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 14px;
+        padding: 12px 12px;
+      }
+
+      summary {
+        cursor: pointer;
+        list-style: none;
+        font-weight: 600;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      details p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: linear-gradient(135deg, rgba(122, 167, 255, 0.20), rgba(167, 139, 250, 0.18));
+        font-weight: 600;
+      }
+
+      .cta small {
+        font-weight: 500;
+        color: var(--muted);
+      }
+
+      footer {
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 12px;
+        text-align: center;
+        padding: 10px 0 0;
+      }
+
+      .note {
+        color: var(--muted);
+        font-size: 13px;
+        margin: 10px 0 0;
+      }
+
+      .ok {
+        color: var(--ok);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M7 4.5h10c1.38 0 2.5 1.12 2.5 2.5v10c0 1.38-1.12 2.5-2.5 2.5H7c-1.38 0-2.5-1.12-2.5-2.5V7c0-1.38 1.12-2.5 2.5-2.5Z"
+                stroke="currentColor"
+                stroke-width="1.6"
+                opacity="0.92"
+              />
+              <path
+                d="M8.5 8.5h7v7h-7v-7Z"
+                stroke="currentColor"
+                stroke-width="1.6"
+                opacity="0.92"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1>极简边框 · 支持与帮助</h1>
+            <p class="subtitle">好看、简洁、好用，并且 <span class="ok">永远不会有广告</span>。</p>
+          </div>
+        </div>
+
+        <div class="pills" role="list">
+          <div class="pill" role="listitem"><strong>平台</strong>：iPhone</div>
+          <div class="pill" role="listitem"><strong>无需登录</strong></div>
+          <div class="pill" role="listitem"><strong>无内购/无订阅</strong></div>
+          <div class="pill" role="listitem"><strong>无联网功能</strong></div>
+          <div class="pill" role="listitem"><strong>无广告</strong></div>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2>快速使用</h2>
+          <div class="kvs">
+            <div class="kv">
+              <div class="k">1) 选择照片</div>
+              <div class="v">从相册选择一张照片开始编辑。</div>
+            </div>
+            <div class="kv">
+              <div class="k">2) 选择边框</div>
+              <div class="v">挑选喜欢的边框与排版，必要时微调细节。</div>
+            </div>
+            <div class="kv">
+              <div class="k">3) 导出作品</div>
+              <div class="v">保存到相册、分享，或拷贝到剪贴板。</div>
+            </div>
+            <div class="kv">
+              <div class="k">4) 收藏配置</div>
+              <div class="v">把常用边框配置加入收藏，随时复用。</div>
+            </div>
+          </div>
+          <p class="note">提示：如“保存到相册”失败，请优先检查系统相册权限（设置 → 隐私与安全性 → 照片）。</p>
+        </section>
+
+        <section>
+          <h2>联系支持</h2>
+          <div class="contact">
+            <a class="cta" href="mailto:syxing001@163.com?subject=%E6%9E%81%E7%AE%80%E8%BE%B9%E6%A1%86%20%E6%94%AF%E6%8C%81%E5%92%A8%E8%AF%A2">
+              邮件联系：syxing001@163.com
+              <small>（点击发送）</small>
+            </a>
+            <div class="kv">
+              <div class="k">为了更快定位问题，建议附上</div>
+              <div class="v">iOS 版本、机型、问题发生步骤、以及相关截图（如有）。</div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>常见问题（FAQ）</h2>
+          <div class="faq">
+            <details>
+              <summary>为什么需要照片权限？</summary>
+              <p>用于从相册选择照片进行编辑，以及把导出的作品保存回相册。应用不需要登录，也不包含联网账号功能。</p>
+            </details>
+            <details>
+              <summary>保存失败怎么办？</summary>
+              <p>请在系统设置中允许“照片”权限；若仍失败，可尝试重启应用后再次保存，或先用“分享/拷贝”导出再保存。</p>
+            </details>
+            <details>
+              <summary>会有广告或订阅吗？</summary>
+              <p>不会。极简边框坚持纯净体验：无广告、无内购、无订阅。</p>
+            </details>
+            <details>
+              <summary>会收集或上传我的照片吗？</summary>
+              <p>不会。照片处理与导出在设备本地完成；应用不提供联网账号功能，也不做跨应用跟踪。</p>
+            </details>
+            <details>
+              <summary>支持 iPad 吗？</summary>
+              <p>当前版本仅支持 iPhone。</p>
+            </details>
+          </div>
+        </section>
+
+        <section>
+          <h2>隐私说明（简要）</h2>
+          <div class="kv">
+            <div class="k">我们重视你的隐私</div>
+            <div class="v">
+              极简边框不提供账号登录，不包含广告与订阅功能；编辑与导出在本地完成。应用仅在你授权的前提下访问照片，用于选择与保存导出作品。
+            </div>
+          </div>
+          <p class="note">如对隐私有疑问，欢迎邮件联系我们：<a href="mailto:syxing001@163.com">syxing001@163.com</a></p>
+        </section>
+
+        <section>
+          <h2>版本与兼容性</h2>
+          <div class="kvs">
+            <div class="kv">
+              <div class="k">支持设备</div>
+              <div class="v">iPhone</div>
+            </div>
+            <div class="kv">
+              <div class="k">最低系统</div>
+              <div class="v">iOS 16.6（以 App Store 显示为准）</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>© 极简边框（PureFrame）</div>
+        <div>最后更新：2025-12-25</div>
+      </footer>
+    </div>
+  </body>
+</html>
+
